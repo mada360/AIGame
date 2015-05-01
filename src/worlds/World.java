@@ -21,8 +21,8 @@ public class World {
     }
 
     public void render(Graphics g){
-        for(int y = 0; y < height - 1; y++){
-            for(int x = 0; y < width -1 ; x++){
+        for(int y = 0; y < height ; y++){
+            for(int x = 0; x < width  ; x++){
                 getTile(x,y).render(g, x* Tile.TILEWIDTH, y* Tile.TILEHEIGHT);
             }
         }

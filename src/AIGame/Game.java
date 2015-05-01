@@ -78,13 +78,6 @@ public class Game implements Runnable{
         g.setColor(Color.white);
         g.fillRect(0 , 0, width,height);
 
-        //Content
-     /*   for(int i = 0; i < height; i+= size){
-            for(int j = 0; j < width; j+= size){
-               // g.drawImage(gfx.Assets.getTile('s'),i,j,null);
-            }
-        }*/
-
         if(State.getState() != null){
             State.getState().render(g);
         }

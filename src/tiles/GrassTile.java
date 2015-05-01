@@ -8,7 +8,7 @@ import gfx.Assets;
 public class GrassTile extends Tile {
 
     public GrassTile(int id) {
-        super(Assets.ground, id);
+        super(Assets.grass, id);
     }
 
 }
