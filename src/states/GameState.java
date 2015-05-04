@@ -1,5 +1,6 @@
 package states;
 
+import KB.KBWorld;
 import entities.creatures.Player;
 import worlds.World;
 
@@ -13,9 +14,11 @@ public class GameState extends State{
     private Player player;
     private World world;
 
+    KBWorld KB = new KBWorld();
+
     public GameState(Game game){
         super(game);
-        player = new Player(game, 100, 100);
+        player = new Player(game, KB.getPlayerX(), KB.getPlayerY());
         world = new World("res/worlds/world1.txt");
     }
 
