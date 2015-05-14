@@ -7,8 +7,18 @@ import gfx.Assets;
 
 public class TrapTile extends Tile {
 
+    private boolean triggered = false;
+
     public TrapTile(int id) {
         super(Assets.trap, id);
+    }
+
+    public boolean isTriggered(){
+        return triggered;
+    }
+
+    public void setTriggered(){
+        triggered = true;
     }
 
 }

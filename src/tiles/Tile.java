@@ -12,6 +12,8 @@ public class Tile {
     //Static stuff
 
     public static Tile[] tiles = new Tile[256];
+
+    //Background tiles
     public static Tile grassTile = new GrassTile(0);
     public static Tile noneTile = new NoneTile(1);
     public static Tile fogTile  = new FogTile(2);
@@ -21,6 +23,20 @@ public class Tile {
     public static Tile trapTile  = new TrapTile(6);
     public static Tile goalTile  = new GoalTile(7);
     public static Tile smellTile  = new SmellTile(8);
+
+    //Creature tiles
+    public static Tile PlayerTile = new PlayerTile(9);
+    //Need to be implemented
+ /*   public static Tile Tile = new NoneTile(10);
+    public static Tile Tile  = new FogTile(11);
+    public static Tile Tile  = new GroundTile(12);
+    public static Tile Tile  = new WaterTile(13);
+    public static Tile Tile  = new TreasureTile(14);
+    public static Tile Tile  = new TrapTile(15);
+    public static Tile Tile  = new GoalTile(16);
+    public static Tile Tile  = new SmellTile(17);*/
+
+    private static boolean walkable = true;
 
 
     //Class
@@ -52,6 +68,10 @@ public class Tile {
 
     public int getId(){
         return id;
+    }
+
+    public static boolean isWalkable() {
+        return walkable;
     }
 
 }
